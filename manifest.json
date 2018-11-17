@@ -1,0 +1,14 @@
+{
+  "name": "M. Emoji",
+  "version": "1.0",
+  "description": "Replaces the true/false images of some learning platform application with Emojis.",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [{
+    "matches": ["*://*/*level.php*"],
+    "run_at": "document_end",
+    "js": ["contentScript.js"]
+  }]
+}
